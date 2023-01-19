@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1299261580006792378}
   - component: {fileID: 1299261580006792379}
   - component: {fileID: 1299261580006792372}
-  - component: {fileID: 1299261580006792373}
+  - component: {fileID: 6983907936865383820}
   - component: {fileID: 1299261580006792374}
   m_Layer: 0
   m_Name: Player
@@ -111,7 +111,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.8368735, y: 4.8219404}
   m_EdgeRadius: 0
---- !u!114 &1299261580006792373
+--- !u!114 &6983907936865383820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,11 +120,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1299261580006792375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 997e8322c21d2bd4eb6f7f417f05ef86, type: 3}
+  m_Script: {fileID: 11500000, guid: 401af639d653a4443b4f7fb450a7a5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  animator: {fileID: 0}
+  controlType: 0
+  joystick: {fileID: 0}
+  speed: 0
 --- !u!50 &1299261580006792374
 Rigidbody2D:
   serializedVersion: 4

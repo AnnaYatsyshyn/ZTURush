@@ -364,6 +364,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1805458777}
     - target: {fileID: 1299261580006792373, guid: e43b98f28563a1041bbbaba1eb2f6d7f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299261580006792373, guid: e43b98f28563a1041bbbaba1eb2f6d7f, type: 3}
       propertyPath: controlType
       value: 1
       objectReference: {fileID: 0}
@@ -435,6 +439,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6983907936865383820, guid: e43b98f28563a1041bbbaba1eb2f6d7f, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983907936865383820, guid: e43b98f28563a1041bbbaba1eb2f6d7f, type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1805458777}
+    - target: {fileID: 6983907936865383820, guid: e43b98f28563a1041bbbaba1eb2f6d7f, type: 3}
+      propertyPath: controlType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43b98f28563a1041bbbaba1eb2f6d7f, type: 3}
 --- !u!1 &181523050
@@ -1510,7 +1526,7 @@ Animator:
   m_GameObject: {fileID: 840468968}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 258ed42e21344ea4091cf7de7ab59767, type: 2}
+  m_Controller: {fileID: 9100000, guid: baf1b31a814c68d48b31d90e0e8a9465, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
