@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Pathfinding;
 
 public class MorozovController : MonoBehaviour
@@ -35,6 +36,12 @@ public class MorozovController : MonoBehaviour
             GameObject Player = collision.gameObject;
             transform.parent.transform.position = points[Random.Range(0, points.Length - 1)].position;
             Player.transform.position = Player.GetComponent<Player>().startPoint;
+            HealthController health = Player.GetComponent<HealthController>();
+            Player.GetComponent<HealthController>().health--;
+            if (Player.GetComponent<HealthController>().health <=0 )
+            {
+                SceneManager.LoadScene(1);
+            }
         }
     }
 }

@@ -29,8 +29,7 @@ public class Logika : MonoBehaviour
     {
         Debug.Log("Ok");
         correct.SetActive(true);
-        Invoke("LoadScene", 1.0f);
-
+        Destroy(task, 3);
 
 
 
@@ -42,7 +41,7 @@ public class Logika : MonoBehaviour
         wrong.SetActive(true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().health -= 1;
         //wrong.SetActive(false);
-        
+        Destroy(task, 3);
     }
 
     public void Check()
@@ -51,22 +50,13 @@ public class Logika : MonoBehaviour
         if (txt == answer)
         {
             correct.SetActive(true);
-            Invoke("LoadScene", 1.0f);
+            Destroy(task, 3);
         }
         else
         {
             wrong.SetActive(true);
             GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().health -= 1;
-            
+            Destroy(task, 3);
         }
-    }
-    private void LoadScene()
-    {
-
-        if (kilk_kvest == 0)
-        {
-            SceneManager.LoadScene("Temp");
-        }
-        task.SetActive(false);
     }
 }

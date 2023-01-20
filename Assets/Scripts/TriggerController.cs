@@ -18,7 +18,7 @@ public class TriggerController : MonoBehaviour
             game.SetActive(true);
             //arrow.SetActive(false);
             //Debug.Log(this);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
