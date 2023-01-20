@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Temp.unity
     guid: 91ca8125e1f89e244b46c86818a6b6e2
   - enabled: 1
-    path: Assets/Scenes/Cutscene.unity
-    guid: 4250d462dbd8a324da97b83b1b0305fa
+    path: Assets/Scenes/Cutscene 1.unity
+    guid: 3153aba81eba5e04baf9de5b6a147389
   - enabled: 1
     path: Assets/Scenes/Scene.unity
     guid: 06d85e51f0bf3df42b3dbf968500dae8
