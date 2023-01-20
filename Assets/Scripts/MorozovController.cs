@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class MorozovAnimController : MonoBehaviour
+public class MorozovController : MonoBehaviour
 {
     public Animator Animator;
     public Rigidbody2D Rigidbody;
     public AIPath aiPath;
+    public Transform[] points;
 
     void Start()
     {
@@ -27,4 +28,15 @@ public class MorozovAnimController : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "Player") {
+            GameObject Player = collision.gameObject;
+            transform.parent.transform.position = points[Random.Range(0, points.Length - 1)].position;
+            Player.transform.position = Player.GetComponent<Player>().startPoint;
+        }
+    }
 }
+
+

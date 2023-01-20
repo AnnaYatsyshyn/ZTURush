@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     public PlayerMoveRightState MoveRightState { get; private set; }
     public Animator Anim { get; private set; }
     public Rigidbody2D Rigidbody { get; private set; }
-
+    public Vector3 startPoint;
 
 
     public ControlType controlType;
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
         {
             joystick.gameObject.SetActive(false);
         }
-
+        startPoint = transform.position;
     }
     private void Start()
     {
