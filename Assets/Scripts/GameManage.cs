@@ -23,14 +23,18 @@ public class GameManage : MonoBehaviour {
 
     bool inputEnabled = false;
     bool gameOver = false;
+    
+    public GameObject correct;
+    public GameObject wrong;
+    public GameObject task;
 
     void Start() {
         gameButtons = new List<GameObject>();
 
-        CreateGameButton(0, new Vector3(-75, 75));
-        CreateGameButton(1, new Vector3(75, 75));
-        CreateGameButton(2, new Vector3(-75, -75));
-        CreateGameButton(3, new Vector3(75, -75));
+        CreateGameButton(0, new Vector3(-150, 150));
+        CreateGameButton(1, new Vector3(150, 150));
+        CreateGameButton(2, new Vector3(-150, -150));
+        CreateGameButton(3, new Vector3(150, -150));
 
         StartCoroutine(SimonSays());
     }
@@ -76,6 +80,9 @@ public class GameManage : MonoBehaviour {
 
         if(bleeps[playerBleeps.Count - 1] != index) {
             GameOver();
+            wrong.SetActive(true);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().health -= 1;
+            Destroy(task, 3);
             Debug.Log("Fail!");
             return;
         }
@@ -90,6 +97,8 @@ public class GameManage : MonoBehaviour {
             else
             {
                 GameOver();
+                correct.SetActive(true);
+                Destroy(task, 3);
                 Debug.Log("Win!");
             }
         }
