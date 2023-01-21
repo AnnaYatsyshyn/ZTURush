@@ -31,7 +31,7 @@ public class TeacherController : MonoBehaviour
         if (collision.gameObject.tag == "Player" && SceneManager.sceneCount == 1)
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene(2, LoadSceneMode.Additive);
+            SceneManager.LoadScene(5, LoadSceneMode.Additive);
         }
     }
 }

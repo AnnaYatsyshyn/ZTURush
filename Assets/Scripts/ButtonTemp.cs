@@ -7,7 +7,7 @@ public class ButtonTemp : MonoBehaviour
 {
     public void GoBack()
     {
-            SceneManager.UnloadSceneAsync(2);
+            SceneManager.UnloadSceneAsync(5);
             Time.timeScale = 1.0f;
     }
 }
